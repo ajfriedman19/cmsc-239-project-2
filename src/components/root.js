@@ -1,6 +1,8 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
+import {create_pairs} from '../utils.js';
+
 
 const longBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -20,12 +22,15 @@ class RootComponent extends React.Component {
   }
 
   componentWillMount() {
-    csv('data/sample-data.csv')
+    // csv('data/sample-data.csv')
+    csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv')
       .then(data => {
         this.setState({
           data,
           loading: false
         });
+        create_pairs(data)
+        // console.log(create_pairs(data));
       });
   }
 
