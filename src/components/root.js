@@ -74,7 +74,7 @@ class RootComponent extends React.Component {
         this.setState({
           datavals: data[0],
           loading: false,
-          chart2: data[2],
+          chart2: data[4],
           pvals: data[1]
         });
         console.log(aggregateByCommunityAndMonths(data[1], 1, 2));
