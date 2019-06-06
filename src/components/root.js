@@ -89,6 +89,7 @@ class RootComponent extends React.Component {
     return (
       <div className="relative">
         <h1> Hello Explainable! Im working on the Donut Chart. </h1>
+        <h1> So You Think You Can Get Tenture!</h1>
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <div>{histogramBlock}</div>
         <ExampleChart3 data={chart2}/>

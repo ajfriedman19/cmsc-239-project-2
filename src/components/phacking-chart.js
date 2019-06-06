@@ -100,14 +100,10 @@ export default class ExampleChart1 extends Component {
           <div data-role="rangeslider">
             {<p>Min Month</p>}
             {<p></p>}
-            {<input type="range" id="price-min" min="1" max="12" step="1" defaultValue="1"/>}
-            {<input type="range" id="price-max" onChange={() => {this.setState({
-              max:document.getElementById('price-max').value
-            })}
-              if (max < min) {
-                document.getElementById('price-max').value = max 
-              }
-          } id="price-max" min="1" max="12" step="1"/>}
+            {<p> Month to start aggregating electricity use: </p>}
+            {<input value={this.state.min} onChange={evt => this.setState(min: evt.target.value)}/>}
+            {<p> Month to stop aggregating electricity use: </p>}
+            {<input value={this.state.max} onChange={evt => this.setState(max: evt.target.value)}/>}
           </div>
       </div>
 
