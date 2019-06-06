@@ -4,17 +4,6 @@ import {RadialChart, Hint, XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGr
 import {tTestText} from '../utils.js';
 import {aggregateByCommunityFormat} from '../utils'
 
-
-function groupBy(data, key) {
-  return data.reduce((acc, row) => {
-    if (!acc[row[key]]) {
-      acc[row[key]] = [];
-    }
-    acc[row[key]].push(row);
-    return acc;
-  }, {});
-}
-
 function updateVal(data, key) {
   return data.reduce((acc, row) => {
     if (!acc[row[key]]) {
@@ -25,7 +14,7 @@ function updateVal(data, key) {
   }, {});
 }
 
-export default class HackingChart extends Component {
+export default class ExampleChart1 extends Component {
   constructor() {
     super();
     this.state = {
