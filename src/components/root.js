@@ -1,5 +1,6 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
+import DonutChart from './donut_chart';
 import ExampleChart from './example-chart';
 import ExampleChart1 from './phacking-chart';
 import ExampleChart3 from './example-chart3';
@@ -85,10 +86,10 @@ class RootComponent extends React.Component {
     }
     return (
       <div className="relative">
-        <h1> So You Think You Can Get Tenture!</h1>
+        <h1> Hello Explainable! I'm working on the Donut Chart.</h1>
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <div>{histogramBlock}</div>
-        <ExampleChart data={datavals}/>
+        <DonutChart data={datavals}/>
         <div>{verticalBlock}</div>
         <ExampleChart data={datavals}/>
         <div>{explainedBlock}</div>
