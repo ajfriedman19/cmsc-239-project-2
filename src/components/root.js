@@ -64,6 +64,8 @@ phenomemon is known as p-hacking or data dredging. Basically, if you perform eno
 a large enough dataset, you're likely to find results good enough for publishing.
 `;
 
+const explainedBlock2 = `To get a sense for how this works, we tried it out on our own dataset`;
+
 const pvalOneBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -122,9 +124,10 @@ class RootComponent extends React.Component {
         <div>{histogramBlock}</div>
         <ExampleChart2 data={pvals}/>
         <div>{verticalBlock}</div>
-        <br />
         <ExampleChart3 data={chart2}/>
         <div>{explainedBlock}</div>
+        <br />
+        <div>{explainedBlock2}</div>
         <ExampleChart data={datavals}/>
         <div>{pvalOneBlock}</div>
         <DonutChart data={datavals}/>
