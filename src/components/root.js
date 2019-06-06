@@ -1,8 +1,6 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
-import ExampleChart2 from './example-chart2';
-import ExampleChart3 from './example-chart3';
 import {create_pairs} from '../utils.js';
 
 
@@ -23,37 +21,31 @@ class RootComponent extends React.Component {
     };
   }
 
-//console.log('hi');
-
   componentWillMount() {
-    Promise.all([
-    csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv'),
-    csv('data/p-data.csv'),
-    csv('data/chart2.csv'),
-     ]).then(data => {
+    // csv('data/sample-data.csv')
+    csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv')
+      .then(data => {
         this.setState({
-          datavals: data[0],
-          loading: false,
-          chart2: data[2],
-          pvals: data[1]
+          data,
+          loading: false
         });
-        console.log(data[1]);
+        create_pairs(data)
+        // console.log(create_pairs(data));
       });
   }
 
-
   render() {
-    const {datavals, loading, chart2, pvals} = this.state;
+    const {loading, data} = this.state;
     if (loading) {
       return <h1>LOADING</h1>;
     }
     return (
       <div className="relative">
         <h1> Hello Explainable!</h1>
-        <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
-        <ExampleChart data={datavals}/>
+        <div>{`The example data was loaded! There are ${data.length} rows`}</div>
+        <ExampleChart data={data}/>
         <div>{longBlock}</div>
-        <ExampleChart2 data={pvals}/>
+        <ExampleChart data={data}/>
         <div>{longBlock}</div>
       </div>
     );
