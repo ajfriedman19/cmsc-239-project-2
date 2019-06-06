@@ -1,7 +1,7 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
-import ExampleChart1 from './phacking-chart';
+//import ExampleChart1 from './phacking-chart';
 import ExampleChart3 from './example-chart3';
 import ExampleChart2 from './example-chart2';
 import DonutChart from './donut_chart';
@@ -92,7 +92,6 @@ class RootComponent extends React.Component {
         <h1> So You Think You Can Get Tenture!</h1>
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <div>{histogramBlock}</div>
-        <ExampleChart3 data={chart2}/>
         <DonutChart data={datavals}/>
         <div>{verticalBlock}</div>
         <ExampleChart2 data={pvals}/>
@@ -101,7 +100,7 @@ class RootComponent extends React.Component {
         <div>{pvalOneBlock}</div>
         <DonutChart data={datavals}/>
         <div>{pvalTwoBlock}</div>
-        <ExampleChart1 data={datavals}/>
+        <ExampleChart3 data={chart2}/>
       </div>
     );
   }

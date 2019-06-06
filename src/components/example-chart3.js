@@ -24,7 +24,7 @@ constructor() {
 
     const {value, keyOfInterest} = this.state;
     const {data} = this.props;
-    console.log(data[1]);
+
 
     const axisStyle = {
     ticks: {
@@ -42,7 +42,7 @@ constructor() {
     <XYPlot width={500} height={300}>
       <VerticalGridLines />
       <HorizontalGridLines />
-      <XAxis
+   <XAxis
         title = "Number of Tests"
         style={axisStyle}/>
       <YAxis
