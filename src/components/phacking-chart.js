@@ -97,13 +97,13 @@ export default class ExampleChart1 extends Component {
             </div>
           </div>
 
-          <div data-role="rangeslider">
+          <div>
             {<p>Min Month</p>}
             {<p></p>}
             {<p> Month to start aggregating electricity use: </p>}
-            {<input value={this.state.min} onChange={evt => this.setState(min: evt.target.value)}/>}
+            {<input id="min-input" value={this.state.min} onChange={() => this.setState({min: document.getElementById('min-input').value})}/>}
             {<p> Month to stop aggregating electricity use: </p>}
-            {<input value={this.state.max} onChange={evt => this.setState(max: evt.target.value)}/>}
+            {<input id="max-input" value={this.state.max} onChange={() => this.setState({max: document.getElementById('max-input').value})}/>}
           </div>
       </div>
 
