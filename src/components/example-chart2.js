@@ -64,7 +64,7 @@ constructor() {
   };
 
     return(
-    <div>
+    <div className="main-phack">
      <XYPlot xType="ordinal" width={500} height={500}  ydomain={[ydomain.min, ydomain.max]}
      colorType = 'category'
      colorDomain = {[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]}

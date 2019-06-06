@@ -39,6 +39,7 @@ constructor() {
 
 
     return(
+    <div className = "main-phack">
     <XYPlot width={500} height={300}>
       <VerticalGridLines />
       <HorizontalGridLines />
@@ -75,6 +76,7 @@ constructor() {
         />
         {value !== false && <Hint value={value} />}
     </XYPlot>
+    </div>
     );
   };
 }
