@@ -70,10 +70,10 @@ export default class DonutChart extends Component {
       'children': [{'title': 'cluster', 'children': dictPreppedData}]
     };
     return (
-      <div>
+      <div className="main-phack">
         <Treemap 
          title={'Treemap'}
-         width={1500}
+         width={1000}
          height={400}
          color={'#12939A'}
          data={dictTreemap}
