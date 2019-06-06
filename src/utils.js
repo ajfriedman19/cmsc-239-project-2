@@ -59,3 +59,31 @@ export function aggregateByCommunityAndMonths(data, startMonth, endMonth) {
 	}
 	return kwhByCommunityAndMonths;
 }
+/************************************************************************************************************************
+	aggregateByCommunityAndIncome(data)
+
+	INPUTS
+	- data: the csv file
+	- startMonth: an integer from 1 to 12, representing the month in 2010 we start aggregating data 
+	- endMonth: an integer from 1 to 12, representing the month in 2010 we stop aggregating data
+
+	RETURNS
+	Dictionary with its keys being community names, and its values being the total kwh consumption of all the buildings
+	in that community, between startMonth and endMonth inclusive.  
+
+	REMARKS
+	Require that startMonth < endMonth. 
+**************************************************************************************************************************/
+export function aggregateByCommunityAndIncome(data) {
+	console.log('here');
+	const incomeByCommunity = {};
+	const popByCommunity = {};
+	const percapincomeByCommunity = {};
+	for (var i = 0; i < data.length; i ++) {
+		var name = data[i]['COMMUNITY AREA NAME'];
+		if (!(name in incomeByCommunity)) {
+			incomeByCommunity[name] = Number(data[i]['MEDIAN_INCOME']);
+		} 
+	}
+	return incomeByCommunity;
+}

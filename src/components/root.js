@@ -1,5 +1,6 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
+import DonutChart from './donut_chart';
 import ExampleChart from './example-chart';
 import ExampleChart3 from './example-chart3';
 import {create_pairs} from '../utils.js';
@@ -57,7 +58,7 @@ class RootComponent extends React.Component {
 
   componentWillMount() {
   Promise.all([
-    csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv'),
+    csv('data/energy_usage.csv'),
     csv('data/p-data.csv'),
     csv('data/chart2.csv'),
      ]).then(data => {
@@ -78,10 +79,10 @@ class RootComponent extends React.Component {
     }
     return (
       <div className="relative">
-        <h1> Hello Explainable!</h1>
+        <h1> Hello Explainable! I'm working on the Donut Chart.</h1>
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <div>{histogramBlock}</div>
-        <ExampleChart data={datavals}/>
+        <DonutChart data={datavals}/>
         <div>{verticalBlock}</div>
         <ExampleChart data={datavals}/>
         <div>{explainedBlock}</div>
