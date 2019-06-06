@@ -1,6 +1,7 @@
 # Explorables / Explainables
 ## CMSC 239 Data Visualization - P2
 
+
 In this project we will dive head first into the burgeoning world of visualization enhanced articles often called explorables or explainables (those terms have slightly different meanings but we are indifferent). Through this type of web page the user is told a story through a mixture of text and visualization in a compelling fashion. There is a lot of excitement in this area because it offers a intuitive view into complex and technical topics. It can push people to try to understand things they've never considered (or just never understood) before.
 
 The output of this work will be a public facing web page hosted on github pages. It will tell a story about a topic that interests you, and will use visualizations to help that story go. (These webpages don't tend to get listed on search engines, so this work will not really be public unless you share the link places. It will be essentially hidden in plain sight.)
