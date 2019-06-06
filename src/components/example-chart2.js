@@ -30,39 +30,12 @@ function ShowcaseButton(props) {
   );
 }
 
-<<<<<<< HEAD
-import {Histogram, DensitySeries, BarSeries, withParentSize, XAxis, YAxis} from '@data-ui/histogram';
 
-export default class ExampleChart2 extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: false,
-      keyOfInterest: 'animal'
-    };
-  }
-
-  render() {
-    const {value, keyOfInterest} = this.state;
-    const {data} = this.props;
-   // const preppedData = Object.entries(groupBy(data, keyOfInterest)).map(([key, values]) => {
-    //  return {key, size: values.length};
-    //});
-    const labels = data.map(a => a.index);
-    const rawdata = data.map(a => a.pvalue);
-    const options = { fillColor: 'red', strokeColor: 'black'};
-    const ResponsiveHistogram = withParentSize(({ parentWidth, parentHeight, ...rest}) => (
-  <Histogram
-    width={parentWidth}
-    height={parentHeight}
-    {...rest}
-  />
-))
-=======
 ShowcaseButton.PropTypes = {
   buttonContent: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 };
->>>>>>> de488e50f1bf59dd306cb86b4417ba1ca705a12b
 
 export default ShowcaseButton;
+
+
