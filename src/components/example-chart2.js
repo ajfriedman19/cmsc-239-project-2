@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 //import Histogram from 'react-chart-histogram';
 
 
-import { Histogram, DensitySeries, BarSeries, withParentSize, XAxis, YAxis } from '@data-ui/histogram';
+import {Histogram, DensitySeries, BarSeries, withParentSize, XAxis, YAxis} from '@data-ui/histogram';
 
 export default class ExampleChart2 extends Component {
   constructor() {

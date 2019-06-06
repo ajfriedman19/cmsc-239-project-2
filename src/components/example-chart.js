@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import {RadialChart, Hint, Treemap} from 'react-vis';
-import ShowcaseButton from './showcase-button';
+//import ShowcaseButton from './showcase-button';
 
 function groupBy(data, key) {
   return data.reduce((acc, row) => {
@@ -74,7 +74,7 @@ function _getRandomData(total) {
     children: leaves
   };
 }
-// example taken from uber and will be overwriteen with the merge 
+// example taken from uber and will be overwriteen with the merge
 export class DynamicTreemapExample extends React.Component {
   state = {
     hoveredNode: false,
@@ -100,11 +100,11 @@ export class DynamicTreemapExample extends React.Component {
     };
     return (
       <div className="dynamic-treemap-example">
-        <ShowcaseButton
-          onClick={() => this.setState({useCirclePacking: !useCirclePacking})}
-          buttonContent={'TOGGLE CIRCLE PACK'}
+        //<ShowcaseButton
+        //  onClick={() => this.setState({useCirclePacking: !useCirclePacking})}
+        //  buttonContent={'TOGGLE CIRCLE PACK'}
         />
-        <Treemap {...treeProps} />
+       // <Treemap {...treeProps} />
         click above to the update data {hoveredNode && hoveredNode.value}
       </div>
     );

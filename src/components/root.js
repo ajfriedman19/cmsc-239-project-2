@@ -53,7 +53,7 @@ class RootComponent extends React.Component {
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <ExampleChart data={datavals}/>
         <div>{longBlock}</div>
-        <ExampleChart2 data={pvals}/>
+        <ExampleChart3 data={chart2}/>
         <div>{longBlock}</div>
       </div>
     );
