@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@devexpress/dx-react-chart-material-ui": "^1.11.0",
     "d3-fetch": "^1.1.0",
     "d3-scale": "^2.0.0",
     "d3-scale-chromatic": "^1.2.0",

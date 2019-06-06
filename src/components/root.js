@@ -2,6 +2,7 @@ import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
 import ExampleChart3 from './example-chart3';
+import ExampleChart2 from './example-chart2';
 import {create_pairs} from '../utils.js';
 
 
@@ -58,7 +59,7 @@ class RootComponent extends React.Component {
   componentWillMount() {
   Promise.all([
     csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv'),
-    csv('data/p-data.csv'),
+    csv('data/p-data-new.csv'),
     csv('data/chart2.csv'),
      ]).then(data => {
         this.setState({
@@ -81,9 +82,9 @@ class RootComponent extends React.Component {
         <h1> Hello Explainable!</h1>
         <div>{`The example data was loaded! There are ${datavals.length} rows`}</div>
         <div>{histogramBlock}</div>
-        <ExampleChart data={datavals}/>
+        <ExampleChart3 data={chart2}/>
         <div>{verticalBlock}</div>
-        <ExampleChart data={datavals}/>
+        <ExampleChart2 data={pvals}/>
         <div>{explainedBlock}</div>
         <ExampleChart data={datavals}/>
         <div>{pvalOneBlock}</div>
