@@ -25,7 +25,7 @@ function updateVal(data, key) {
   }, {});
 }
 
-export default class ExampleChart1 extends Component {
+export default class HackingChart extends Component {
   constructor() {
     super();
     this.state = {
