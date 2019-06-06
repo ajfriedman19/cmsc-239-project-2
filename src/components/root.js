@@ -43,7 +43,7 @@ class RootComponent extends React.Component {
 
 
   render() {
-    const {datavals, loading, chart2} = this.state;
+    const {datavals, loading, chart2, pvals} = this.state;
     if (loading) {
       return <h1>LOADING</h1>;
     }
