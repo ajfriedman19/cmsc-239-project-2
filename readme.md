@@ -80,4 +80,5 @@ If you are considering doing a map based visualization, there are a bunch of pow
 
 - Google maps: everyone uses it, it's everywhere. The API is reasonable easy to work, but there is a limited set of things you can do with it. If you do not need to customize your map too much, this is a great choice.
 
+
 Note: depending on the visualization you are building you might not need fancy web map tools like these! Many visualizations you see in New York Times and other similar outlets use straight SVG maps for Choropleths and sometimes contour maps.
