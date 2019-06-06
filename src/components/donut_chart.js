@@ -35,10 +35,16 @@ export default class DonutChart extends Component {
       'color': '#12939A',
       'children': [{
         'title': 'cluster',
-        'children': [dictPreppedData, dictPreppedData]
+        'children': [{"title": "AgglomerativeCluster", "color": "#000000", "size": 3938},
+    {"title": "CommunityStructure", "color": "#000000", "size": 3812},
+    {"title": "HierarchicalCluster", "color": "#000000", "size": 6714},
+    {"title": "MergeEdge", "color": "#FFFFFF", "size": 743}]
       }, {
         'title': 'group',
-        'children': [dictPreppedData]
+        'children': [{"title": "AgglomerativeCluster", "color": "#000000", "size": 3938},
+    {"title": "CommunityStructure", "color": "blue", "size": 3812},
+    {"title": "HierarchicalCluster", "color": "blue", "size": 6714},
+    {"title": "MergeEdge", "color": "blue", "size": 743}]
       }]
     };
     console.log(dictx);
@@ -48,6 +54,7 @@ export default class DonutChart extends Component {
          title={'Treemap'}
          width={700}
          height={700}
+         color={'blue'}
          data={dictx}
         />
 
