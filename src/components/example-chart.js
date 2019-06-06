@@ -53,4 +53,3 @@ export default class ExampleChart extends Component {
     );
   }
 }
-
