@@ -17,7 +17,7 @@ export default class DonutChart extends Component {
     super();
     this.state = {
       value: false,
-      keyOfInterest: 'BUILDING TYPE'
+      keyOfInterest: 'COMMUNITY AREA NAME'
     };
   }
 
@@ -28,35 +28,29 @@ export default class DonutChart extends Component {
       return {key, size: values.length};
     })
     const dictPreppedData = Object.entries(groupBy(data, keyOfInterest)).map(([key, values]) => {
-      return {title: key, color: '#000000', size: values.length};
+      return {title: key, color: '#000000', size: values.length, style: {'border': 'thin solid white'}};
     });
     const dictx = {
       'title': 'analytics',
       'color': '#12939A',
-      'children': [{
-        'title': 'cluster',
-        'children': [{"title": "AgglomerativeCluster", "color": "#000000", "size": 3938},
-    {"title": "CommunityStructure", "color": "#000000", "size": 3812},
-    {"title": "HierarchicalCluster", "color": "#000000", "size": 6714},
-    {"title": "MergeEdge", "color": "#FFFFFF", "size": 743}]
-      }, {
-        'title': 'group',
-        'children': [{"title": "AgglomerativeCluster", "color": "#000000", "size": 3938},
-    {"title": "CommunityStructure", "color": "blue", "size": 3812},
-    {"title": "HierarchicalCluster", "color": "blue", "size": 6714},
-    {"title": "MergeEdge", "color": "blue", "size": 743}]
-      }]
+      'children': [{'title': 'cluster', 'children': dictPreppedData}]
     };
     console.log(dictx);
     return (
       <div>
         <Treemap 
          title={'Treemap'}
-         width={700}
-         height={700}
-         color={'blue'}
+         width={1500}
+         height={400}
+         color={'#12939A'}
          data={dictx}
         />
+        {['COMMUNITY AREA NAME', 'BUILDING TYPE', 'AVERAGE BUILDING AGE ROUNDED', 'AVERAGE HOUSESIZE ROUNDED'].map(key => {
+          return (<button
+            key={key}
+            onClick={() => this.setState({keyOfInterest: key})}
+            >{key}</button>);
+        })}
 
         <RadialChart
           animation
