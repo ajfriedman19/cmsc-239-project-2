@@ -38,7 +38,7 @@ export default class ExampleChart1 extends Component {
       return {key, x: values.length, y: new_val};
     });
     console.log("test2", preppedData)
-    const tText = tTestText(preppedData1,2)
+    const tText = tTestText(preppedData1,2);
 
     return (
       <div className="main-phack">
