@@ -65,10 +65,8 @@ class RootComponent extends React.Component {
 
   componentWillMount() {
   Promise.all([
-    csv('data/Current_Employee_Names__Salaries__and_Position_Titles_new.csv'),
-    csv('data/p-data-new.csv'),
     csv('data/energy_usage.csv'),
-    csv('data/p-data.csv'),
+    csv('data/p-data-new.csv'),
     csv('data/chart2.csv'),
      ]).then(data => {
         this.setState({

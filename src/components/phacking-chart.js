@@ -60,13 +60,6 @@ export default class ExampleChart1 extends Component {
           <XAxis title="Total Occupation" style={{title: {fill: 'black', fontWeight: 600}}}/>
           <YAxis title="Average KiloWatts Per Hour" style={{title: {fill: 'black', fontWeight: 600}}}/>
           <MarkSeries
-            animation
-            className="mark-series-example"
-            strokeWidth={3}
-            opacity="0.7"
-            data={preppedData1}
-          />
-          <MarkSeries
             className="mark-series-example"
             strokeWidth={3}
             opacity="0.7"
