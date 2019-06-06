@@ -9,7 +9,7 @@ export default class ExampleChart2 extends Component {
   constructor() {
     super();
     this.state = {
-      value: false
+      value: false,
       keyOfInterest: 'animal'
     };
   }
@@ -29,7 +29,7 @@ export default class ExampleChart2 extends Component {
     height={parentHeight}
     {...rest}
   />
-);
+))
 
     return (
       <div>
@@ -52,17 +52,9 @@ export default class ExampleChart2 extends Component {
         >
          <BarSeries
           animated
-          rawdata={rawdata /* or binnedData={...} */}
+          rawdata={rawdata}
         />
         </ResponsiveHistogram>
-     //     {value !== false && <Hint value={value} />}
-       // </Histogram>
-        //{Object.keys(data[0]).map(key => {
-        //  return (<button
-         //   key={key}
-         //   onClick={() => this.setState({keyOfInterest: key})}
-         //   >{key}</button>);
-       // })
       </div>
     );
   }
