@@ -120,7 +120,7 @@ function getdifference(dataX, dataY) {
   let avgY = sumY / dataY.length;
   const diff = avgX - avgY
 
-  return diff
+  return 0
 }
 
 

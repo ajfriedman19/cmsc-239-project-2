@@ -1,7 +1,7 @@
 import React from 'react';
 import {csv} from 'd3-fetch';
 import ExampleChart from './example-chart';
-//import ExampleChart1 from './phacking-chart';
+import HackingChart from './phacking-chart';
 import ExampleChart3 from './example-chart3';
 import ExampleChart2 from './example-chart2';
 import DonutChart from './donut_chart';
@@ -128,7 +128,7 @@ class RootComponent extends React.Component {
         <div>{explainedBlock}</div>
         <br />
         <div>{explainedBlock2}</div>
-        <ExampleChart data={datavals}/>
+        <HackingChart data={datavals}/>
         <div>{pvalOneBlock}</div>
         <DonutChart data={datavals}/>
       </div>
