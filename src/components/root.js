@@ -66,13 +66,12 @@ a large enough dataset, you're likely to find results good enough for publishing
 
 const explainedBlock2 = `To get a sense for how this works, we tried it out on our own dataset`;
 
-const pvalOneBlock = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-`;
+const pvalOneBlock = `We tried the above on our own dataset. But before we apply our statistical analysis to our dataset, let us familiarize ourselves with the data. Our raw dataset
+comprises of the monthly energy usages, in the year 2010, of every single building in the Chicago area. We want to apply our p-value hypothesis testing
+to several different hypotheses, that will be generated from this data. An example of hypotheses we want to test would be: (1) whether there is a 
+significant relationship between community areas and building count, and (2) whether there is a significant relationship between community areas and electricity
+usage, and (3) whether there is a relationship between median income, community areas, electricity usage, and building count, and (4) whether time seasonality (different
+month ranges) has a bearing on any of the above factors. The treemap below gives you an overview of our data. In a very data-description sort of way, our treemap allows you to get a sense of answers to all those hypotheses.`;
 
 const pvalTwoBlock = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -127,8 +126,6 @@ class RootComponent extends React.Component {
         <ExampleChart3 data={chart2}/>
         <div>{explainedBlock}</div>
         <br />
-        <div>{explainedBlock2}</div>
-        <ExampleChart data={datavals}/>
         <div>{pvalOneBlock}</div>
         <DonutChart data={datavals}/>
       </div>
