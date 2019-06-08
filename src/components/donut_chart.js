@@ -79,8 +79,7 @@ export default class DonutChart extends Component {
          data={dictTreemap}
          colorType={'literal'}
         />
-        <p> <b> How many buildings are in each Chicago area? </b> </p> 
-        <p> Buildings are fairly evenly distributed across the city, although residential areas like Lakeview tend to have more buildings. There doesn't seem to be a pattern between building count and median income.</p>
+        <p> <b> How many buildings are in each Chicago area? </b> Buildings are fairly evenly distributed across the city, although residential areas like Lakeview tend to have more buildings. There doesn't seem to be a pattern between building count and median income.</p>
         {['Find out building count by area'].map(key => {
           return (<button
             key={'COMMUNITY AREA NAME'}
@@ -99,26 +98,6 @@ export default class DonutChart extends Component {
         <p> The Loop and Near North Side clearly dominate electricity usage. Interestingly, places with higher median income, tend to have higher electricity use (with the exception of the Loop).</p>
         <br/><br/><br/><br/><br/><br/>
 
-        <RadialChart
-          animation
-          innerRadius={100}
-          radius={140}
-          getAngle={d => d.size}
-          data={preppedData}
-          onValueMouseOver={v => this.setState({value: v})}
-          onSeriesMouseOut={v => this.setState({value: false})}
-          width={300}
-          height={300}
-          padAngle={0.04}
-        >
-          {value !== false && <Hint value={value} />}
-        </RadialChart>
-        {['COMMUNITY AREA NAME', 'BUILDING TYPE'].map(key => {
-          return (<button
-            key={key}
-            onClick={() => this.setState({goal: 'POPULATION', keyOfInterest: key})}
-            >{key}</button>);
-        })}
       </div>
     );
   }
